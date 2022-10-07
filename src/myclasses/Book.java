@@ -50,8 +50,6 @@ public class Book {
         return "Book: " + getTitle() + " | Authors " + Arrays.toString(getAuthors());
     }
 
-    public void addAuthor(Author[] authors5) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
 }
