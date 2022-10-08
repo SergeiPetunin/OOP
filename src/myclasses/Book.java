@@ -7,19 +7,22 @@ package myclasses;
 
 import java.util.Arrays;
 
+
 /**
  *
  * @author pupil
  */
 public class Book {
-    
+    private Book[] books;
     private Author[] authors;
     private String title;
 
     public Book() {
+        books = new Book[0];
         authors = new Author[0];
+  
     }
-
+  
     public Author[] getAuthors() {
         return authors;
     }
@@ -32,11 +35,13 @@ public class Book {
         // создаём копию authors с доплнительной ячейкой
         // в доп ячейку помещаем author
         // в authors кладём ссылку на новый массив.
+        
         Author[] newAuthors = Arrays.copyOf(authors, authors.length + 1);
         newAuthors[newAuthors.length-1] = author;
         authors = newAuthors;
     }
-
+    
+    
     public String getTitle() {
         return title;
     }
@@ -47,9 +52,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book: " + getTitle() + " | Authors " + Arrays.toString(getAuthors());
+        return getTitle() +  " --> Authors:" + Arrays.toString(getAuthors());
     }
-
- 
 
 }
